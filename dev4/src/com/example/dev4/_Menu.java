@@ -18,7 +18,7 @@ public class _Menu extends Activity {
         super.onCreate(icicle);
         setContentView(R.layout.zgt_menu);   
         TextView tv1 = (TextView)findViewById(R.id.textView1);
-		tv1.setText("Allah Rasulu; Din nasihattır, samimiyettir buyurdu Kime Ya Rasulallah? diye sorduk.O da; Allah a, Kitabına, Peygamberine, Muslumanların yoneticilerine ve butun muslumanlara diye cevap verdi.Muslim, İman, 95");
+		tv1.setText("test auto msg");
 		Maakimages();
     }   
     
