@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Zafer Gençlik</string>
+    <string name="app_logo">Zafer Genclik logo</string>
+    <string name="action_settings">Settings</string>
+    <string name="app_title">Zafer Genclik Teskilati</string>
+    <string name="facebook_logo">Facebook logo</string>
+    <string name="facebook_text">Facebook.com/zafergenclik</string>
+    <string name="youtube_text">Youtube.com/Zafergenclik</string>
+    <string name="youtube_logo">Youtube logo</string>
+    <string name="faaliyetler">Faaliyetler</string>
+    <string name="fotoalbum">Foto album</string>
+    <string name="instellingen">instellingen</string>
+
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/faaliyetler"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
+        android:text="@string/faaliyetler" 
+        android:onClick="OpenFaaliyetler"/>
+
+    <Button
+        android:id="@+id/fotoalbum"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="275dp"
+        android:text="@string/fotoalbum"
+        android:onClick="OpenFotoalbum"/>
+
+    <Button
+        android:id="@+id/Ayarlar"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="320dp"
+        android:text="@string/instellingen"
+        android:onClick="OpenAyarlar" />
+
+    <ImageView
+        android:id="@+id/facebook_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="-80dp"
+        android:contentDescription="@string/facebook_logo"
+        android:src="@drawable/facebook_logo" />
+
+    <ImageView
+        android:id="@+id/youtube_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="80dp"
+        android:contentDescription="@string/youtube_logo"
+        android:src="@drawable/youtube_logo" />
+
+   	<ScrollView 
+   	    android:layout_width="match_parent"
+    	android:layout_height="220dp">
+   		<LinearLayout 
+   		    android:layout_width="wrap_content"
+   		    android:layout_height="wrap_content">
+    		<TextView
+        		android:id="@+id/textView1"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:layout_marginLeft="25dp"
+        		android:layout_marginRight="25dp"
+        		android:layout_marginTop="15dp"
+        		android:textSize="22sp"
+        		android:textColor="#0db7ff"
+        		android:text="test"/>
+   		</LinearLayout>
+   	</ScrollView>
+
+</FrameLayout>
