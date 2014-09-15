@@ -17,13 +17,16 @@ public class _Menu extends Activity {
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         setContentView(R.layout.zgt_menu);   
-        TextView tv1 = (TextView)findViewById(R.id.textView1);
-		tv1.setText("test auto msg");
-		Maakimages();
+        MaakImages();
+        MaakTekst();
+        MaakKnoppen();
     }   
     
-    
-    public void Maakimages(){
+    public void MaakTekst(){
+    	TextView tv1 = (TextView)findViewById(R.id.textView1);
+		tv1.setText("test auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msgtest auto msg");
+    }
+    public void MaakImages(){
     	//making the facebook hyperlink out of an image
 		ImageView Facebook_logo = (ImageView)findViewById(R.id.facebook_logo);
 		Facebook_logo.setClickable(true);
@@ -45,9 +48,17 @@ public class _Menu extends Activity {
 		    }
 		});
     }
-    public void OpenFaaliyetler(View v){
-    	setContentView(R.layout.zgt_splash);
-	}
+    
+    public void MaakKnoppen(){
+    	Button button_faaliyet = (Button)findViewById(R.id.faaliyetler);
+    	button_faaliyet.setClickable(true);
+    	button_faaliyet.setOnClickListener(new OnClickListener(){
+			@Override
+			public void onClick(View v) {
+				setContentView(R.layout.zgt_faaliyetler);	
+			}});
+    }
+  // deze moeten nog naar onclicklisteners verwerkt worden in d MaakKnoppen()
     public void OpenFotoalbum(View v){
     	setContentView(R.layout.zgt_splash);
 	}
