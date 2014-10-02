@@ -1,4 +1,6 @@
-package com.example.dev4;
+package com.shinronu.ZaferGenclikApp;
+import com.example.dev4.R;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;

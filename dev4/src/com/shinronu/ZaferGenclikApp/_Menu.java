@@ -1,4 +1,6 @@
-package com.example.dev4;
+package com.shinronu.ZaferGenclikApp;
+import com.example.dev4.R;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -55,7 +57,11 @@ public class _Menu extends Activity {
     	button_faaliyet.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View v) {
-				setContentView(R.layout.zgt_faaliyetler);	
+				Intent intent1 = new Intent(_Menu.this, Faaliyetler.class);
+				_Menu.this.startActivity(intent1);
+				_Menu.this.finish();
+
+				//setContentView(R.layout.zgt_faaliyetler);	
 			}});
     }
   // deze moeten nog naar onclicklisteners verwerkt worden in d MaakKnoppen()
