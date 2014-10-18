@@ -15,7 +15,8 @@ public final class R {
         public static final int abc_slide_in_top=0x7f040003;
         public static final int abc_slide_out_bottom=0x7f040004;
         public static final int abc_slide_out_top=0x7f040005;
-        public static final int translate=0x7f040006;
+        public static final int alpha=0x7f040006;
+        public static final int translate=0x7f040007;
     }
     public static final class attr {
         /**  Custom divider drawable to use for elements in the action bar. 
@@ -1266,8 +1267,8 @@ containing a value of this type.
         public static final int app_title=0x7f0a0010;
         public static final int faaliyet_header=0x7f0a0018;
         public static final int faaliyetler=0x7f0a0015;
-        public static final int faaliyetpage_title1=0x7f0a0019;
-        public static final int faaliyetpage_title2=0x7f0a001a;
+        public static final int faaliyetpage_persembe_evsohbeti_content=0x7f0a001a;
+        public static final int faaliyetpage_persembe_evsohbeti_title=0x7f0a0019;
         public static final int facebook_logo=0x7f0a0011;
         public static final int facebook_text=0x7f0a0012;
         public static final int fotoalbum=0x7f0a0016;

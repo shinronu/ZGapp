@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">Zafer Gençlik</string>
     <string name="app_logo">Zafer Genclik logo</string>
     <string name="action_settings">Settings</string>
@@ -13,6 +12,6 @@
     <string name="fotoalbum">Foto album</string>
     <string name="instellingen">instellingen</string>
     <string name="faaliyet_header">Faaliyetler</string>
-	<string name="faaliyetpage_title1">title 1</string>
-	<string name="faaliyetpage_title2">title 1title 1title 1title 1title 1title 1title 1title 1title 1title 1title 1title 1title 1title 1title 1title 1title 1title 1title 1title 1title 1title 1title 1title 1title 1title 1title 1title 1title 1title 1title 1title 1title 1</string>
+	<string name="faaliyetpage_persembe_evsohbeti_title">Persembe Ev Sohbeti</string>
+	<string name="faaliyetpage_persembe_evsohbeti_content">Yer:x Saat:y Konu:z</string>
 </resources>

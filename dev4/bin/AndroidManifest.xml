@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name="com.shinronu.ZaferGenclikApp.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>        
                 <category android:name="android.intent.category.LAUNCHER" />
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +22,8 @@
         <activity 
             android:name="com.shinronu.ZaferGenclikApp._Menu"
             android:label="@string/app_name" 
-            android:theme="@android:style/Theme">
+            android:theme="@android:style/Theme"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.shinronu.ZaferGenclikApp.Faaliyetler"
@@ -32,5 +33,6 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
+
     </application>
 </manifest>

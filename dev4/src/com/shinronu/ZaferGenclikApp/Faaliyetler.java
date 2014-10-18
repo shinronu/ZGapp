@@ -11,46 +11,75 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.app.Activity;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
+import android.view.animation.TranslateAnimation;
 
 @SuppressWarnings("unused")
 public class Faaliyetler extends Activity{
 	 TextView txt_help_gest;
+	 public static final int duration = 1000;
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.zgt_faaliyetler);   
         MaakTekst();
         txt_help_gest = (TextView) findViewById(R.id.txt_help_gest);
-        txt_help_gest.setVisibility(View.GONE);
-        //runAlphaAnimation(this, a_checkbox.getId());
-        //runAlphaAnimation(this, a_button.getId());
-
+        createAnimation();
+        //txt_help_gest.setVisibility(View.GONE);
     }   
     
 	public void MaakTekst(){
 		TextView tv1 = (TextView)findViewById(R.id.TextView1);
-		tv1.setText("Faaliyetler Faaliyetler");		
+		tv1.setText("Faaliyetler");		
 	}
 
-	 public static void runTranslateAnimation(Activity act, int viewId) {
-	        Animation animation  = AnimationUtils.loadAnimation(act, R.anim.translate);
-	        if(animation == null){
-	        	return;
-	        }
-	        animation.reset();
-	        View v = act.findViewById(viewId);
-	        if (v != null){
-	        	v.clearAnimation();
-	        	v.startAnimation(animation);
-	        }
-	    }
-	/**
+//	 public static void runTranslateAnimation(Activity act, int viewId) {
+//	        Animation translateanim  = AnimationUtils.loadAnimation(act, R.anim.translate);
+//	        if(translateanim == null){
+//	        	return;
+//	        }
+//	        translateanim.reset();
+//	        View v = act.findViewById(viewId);
+//	        if (v != null){
+//	        	v.clearAnimation();
+//	        	v.startAnimation(translateanim);
+//	        }
+//	    }
+//	 
+//	 public static void runAlphaAnimation(Activity act, int viewId) {
+//	        Animation alphaanim  = AnimationUtils.loadAnimation(act, R.anim.translate);
+//	        if(alphaanim == null){
+//	        	return;
+//	        }
+//	        alphaanim.reset();
+//	        View v = act.findViewById(viewId);
+//	        if (v != null){
+//	        	v.clearAnimation();
+//	        	v.startAnimation(alphaanim);
+//	        }
+//	    }
+//	
+	 private Animation createAnimation(){
+		 Animation fadein = new AlphaAnimation(0, 1);
+		 fadein.setDuration(duration);
+		 fadein.setFillAfter(true);
+		 Animation slide = new TranslateAnimation(0, 0, -100, 100);
+		 slide.setDuration(duration);
+		 slide.setFillAfter(true);
+		 AnimationSet animations = new AnimationSet(false);
+		 animations.setFillAfter(true);
+		 animations.addAnimation(fadein);
+		 animations.addAnimation(slide);
+		 return animations;
+	 }
+	 /**
 	* onClick handler
 	*/
 	public void toggle_contents(View v){
-		runTranslateAnimation(this, txt_help_gest.getId());
+		createAnimation();
 		txt_help_gest.setVisibility( txt_help_gest.isShown()
 	                          ? View.GONE
 	                          : View.VISIBLE );

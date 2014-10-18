@@ -4,7 +4,8 @@ int anim abc_slide_in_bottom 0x7f040002
 int anim abc_slide_in_top 0x7f040003
 int anim abc_slide_out_bottom 0x7f040004
 int anim abc_slide_out_top 0x7f040005
-int anim translate 0x7f040006
+int anim alpha 0x7f040006
+int anim translate 0x7f040007
 int attr actionBarDivider 0x7f01000f
 int attr actionBarItemBackground 0x7f010010
 int attr actionBarSize 0x7f01000e
@@ -364,8 +365,8 @@ int string app_name 0x7f0a000d
 int string app_title 0x7f0a0010
 int string faaliyet_header 0x7f0a0018
 int string faaliyetler 0x7f0a0015
-int string faaliyetpage_title1 0x7f0a0019
-int string faaliyetpage_title2 0x7f0a001a
+int string faaliyetpage_persembe_evsohbeti_content 0x7f0a001a
+int string faaliyetpage_persembe_evsohbeti_title 0x7f0a0019
 int string facebook_logo 0x7f0a0011
 int string facebook_text 0x7f0a0012
 int string fotoalbum 0x7f0a0016
