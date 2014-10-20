@@ -72,7 +72,7 @@
         		android:layout_marginTop="15dp"
         		android:textSize="22sp"
         		android:textColor="#0db7ff"
-        		android:text="test"/>
+        		android:text="empty value"/>
    		</LinearLayout>
    	</ScrollView>
 

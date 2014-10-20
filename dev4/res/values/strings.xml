@@ -13,5 +13,5 @@
     <string name="instellingen">instellingen</string>
     <string name="faaliyet_header">Faaliyetler</string>
 	<string name="faaliyetpage_persembe_evsohbeti_title">Persembe Ev Sohbeti</string>
-	<string name="faaliyetpage_persembe_evsohbeti_content">Yer:x Saat:y Konu:z</string>
+	<string name="faaliyetpage_persembe_evsohbeti_content">Yer:x  Saat:y Konu:z</string>
 </resources>
