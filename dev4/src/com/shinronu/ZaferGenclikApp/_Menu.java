@@ -22,6 +22,7 @@ public class _Menu extends Activity {
         MaakImages();
         MaakTekst();
         MaakKnoppen();
+        //startService(new Intent(_Menu.this, ZaferGenclikService.class));
     }   
     
     public void MaakTekst(){
@@ -60,8 +61,6 @@ public class _Menu extends Activity {
 				Intent intent1 = new Intent(_Menu.this, Faaliyetler.class);
 				_Menu.this.startActivity(intent1);
 				_Menu.this.finish();
-
-				//setContentView(R.layout.zgt_faaliyetler);	
 			}});
     }
   // deze moeten nog naar onclicklisteners verwerkt worden in d MaakKnoppen()
@@ -69,6 +68,9 @@ public class _Menu extends Activity {
     	setContentView(R.layout.zgt_splash);
 	}
     public void OpenAyarlar(View v){
-    	setContentView(R.layout.zgt_splash);
+    	Intent i = new Intent(this, ZaferGenclikService.class);
+    	this.startService(i);
+    	
+    	//startService(new Intent(_Menu.this, ZaferGenclikService.class));
 	}
 }

@@ -1,116 +1,116 @@
 package com.shinronu.ZaferGenclikApp;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.net.MalformedURLException;
-import java.net.URL;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.select.Elements;
 
 import com.example.dev4.R;
 import android.app.Activity;
-import android.content.Intent;
-import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.app.Activity;
-import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
-import android.view.animation.AnimationUtils;
 import android.view.animation.TranslateAnimation;
 
-@SuppressWarnings("unused")
+@SuppressWarnings("rawtypes")
 public class Faaliyetler extends Activity{
-	 TextView persembe_evsohbeti_content;
-	 public static final int duration = 400;
-	 public int state = 0;
-	 
+	protected String ftp_url = "ftp://a3541642:52a21d87@0867502.herobo.com/public_html/persembe_sohbeti.txt";
+	protected String URL = "https://github.com/shinronu/sohbetler/blob/master/persembe_sohbeti.txt";
+	public TextView persembe_evsohbeti_content;
+	public TextView persembe_evsohbeti_titel;
+	public static final int animation_duration = 400;
+	public static final int toastduration = 2000;
+	public int animation_state = 0;	
+	public String SYer;
+	public String SSaat;
+	public String SKonu;
+
+	@SuppressWarnings("unchecked")
 	@Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.zgt_faaliyetler);   
-        MaakTekst();
-        persembe_evsohbeti_content = (TextView) findViewById(R.id.persembe_evsohbeti_content);
-        persembe_evsohbeti_content.setText("Yer: Huismanstraat 27B" + System.getProperty("line.separator") +"Saat: 19:30"+ System.getProperty("line.separator")+ "Konu: Mobile Development" );
-        persembe_evsohbeti_content.setVisibility(View.GONE);
-    }   
-    
-	public void MaakTekst(){
-		TextView tv1 = (TextView)findViewById(R.id.TextView1);
-		tv1.setText("Faaliyetler");		
-	}
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.zgt_faaliyetler);   
+		MaakTekst();
+		persembe_evsohbeti_titel.setOnClickListener(onClickListener);
+		(new Data_handler()).execute();
+	}   
+
+	public OnClickListener onClickListener = new OnClickListener(){
+		public void onClick(View v){
+			persembe_evsohbeti_content.setText(SYer + "\r\n" +  SSaat +  "\r\n"+ SKonu);
+			toggle_contents(v);
+		}
+	};
 	
-	 private Animation createAnimationIn(){
-		 persembe_evsohbeti_content.setVisibility(View.VISIBLE);
-		 Animation fadein = new AlphaAnimation(0, 1);
-		 fadein.setDuration(duration);
-		 fadein.setFillAfter(true);
-		 Animation slide = new TranslateAnimation(150, 150, -100, 25);
-		 slide.setDuration(duration);
-		 slide.setFillAfter(true);
-		 AnimationSet animations = new AnimationSet(false);
-		 animations.setFillAfter(true);
-		 animations.addAnimation(fadein);
-		 animations.addAnimation(slide);
-		 return animations;
-	 }
-	 
-	 private Animation createAnimationOut(){
-		 persembe_evsohbeti_content.setVisibility(View.VISIBLE);
-		 Animation fadein = new AlphaAnimation(1, 0);
-		 fadein.setDuration(duration);
-		 fadein.setFillAfter(true);
-		 Animation slide = new TranslateAnimation(150, 150, 25, -100);
-		 slide.setDuration(duration);
-		 slide.setFillAfter(true);
-		 AnimationSet animations = new AnimationSet(false);
-		 animations.setFillAfter(true);
-		 animations.addAnimation(fadein);
-		 animations.addAnimation(slide);
-		 return animations;
-	 }
-	 /**
-	* onClick handler
-	*/
+	public void MaakTekst(){
+		persembe_evsohbeti_content = (TextView) findViewById(R.id.persembe_evsohbeti_content);
+		persembe_evsohbeti_content.setVisibility(View.GONE);
+		persembe_evsohbeti_titel = (TextView) findViewById(R.id.persembe_evsohbeti_titel);
+		
+	}
+	private Animation createAnimationIn(){
+		persembe_evsohbeti_content.setVisibility(View.VISIBLE);
+		Animation fadein = new AlphaAnimation(0, 1);
+		fadein.setDuration(animation_duration);
+		fadein.setFillAfter(true);
+		Animation slide = new TranslateAnimation(150, 150, -100, 25);
+		slide.setDuration(animation_duration);
+		slide.setFillAfter(true);
+		AnimationSet animations = new AnimationSet(false);
+		animations.setFillAfter(true);
+		animations.addAnimation(fadein);
+		animations.addAnimation(slide);
+		return animations;
+	}
+	private Animation createAnimationOut(){
+		persembe_evsohbeti_content.setVisibility(View.VISIBLE);
+		Animation fadein = new AlphaAnimation(1, 0);
+		fadein.setDuration(animation_duration);
+		fadein.setFillAfter(true);
+		Animation slide = new TranslateAnimation(150, 150, 25, -100);
+		slide.setDuration(animation_duration);
+		slide.setFillAfter(true);
+		AnimationSet animations = new AnimationSet(false);
+		animations.setFillAfter(true);
+		animations.addAnimation(fadein);
+		animations.addAnimation(slide);
+		return animations;
+	}
 	public void toggle_contents(View v){
-		if (state == 0){
+		if (animation_state == 0){
 			persembe_evsohbeti_content.startAnimation(createAnimationIn());
-			state++;
+			animation_state++;
 		} else {
 			persembe_evsohbeti_content.startAnimation(createAnimationOut());
-			state = 0;
+			animation_state = 0;
 		}
 	}
 
-	public void maakClickable() {
-		TextView toggle_content = (TextView)findViewById(R.id.help_title_gest);
-		toggle_content.setClickable(true);
-		toggle_content.setOnClickListener(new OnClickListener(){
-			@Override
-			public void onClick(View v) {
-				toggle_contents(v);
-			}
-		});
-	}
 	
-	public void readtext (){
-		try {
-		    // Create a URL for the desired page
-		    URL url = new URL("https://github.com/shinronu/ZGapp/thefile.txt");
-
-		    // Read all the text returned by the server
-		    BufferedReader in = new BufferedReader(new InputStreamReader(url.openStream()));
-		    String str;
-		    while ((str = in.readLine()) != null) {
-		        // str is one line of text; readLine() strips the newline character(s)
-		    }
-		    in.close();
-		} catch (MalformedURLException e) {
-		} catch (IOException e) {
+	private class Data_handler extends AsyncTask {		
+		@Override
+		protected Object doInBackground(Object... params) {
+			try {
+				Document doc = Jsoup.connect(URL).get();
+				Elements Yer = doc.select("td#LC1");
+				Elements Saat = doc.select("td#LC2");
+				Elements Konu = doc.select("td#LC3");
+				SYer = Yer.text(); 
+				SSaat = Saat.text();
+				SKonu = Konu.text();
+			}	
+			catch(MalformedURLException e){ 
+			}	 
+			catch (IOException e) {
+				e.printStackTrace();
+			}
+			return null;
 		}
 	}
 }

@@ -237,7 +237,7 @@ int drawable abc_textfield_searchview_holo_light 0x7f020054
 int drawable abc_textfield_searchview_right_holo_dark 0x7f020055
 int drawable abc_textfield_searchview_right_holo_light 0x7f020056
 int drawable facebook_logo 0x7f020057
-int drawable ic_launcher 0x7f020058
+int drawable icon 0x7f020058
 int drawable youtube_logo 0x7f020059
 int drawable zgt_logo_groot 0x7f02005a
 int drawable zgt_naam 0x7f02005b
@@ -274,7 +274,6 @@ int id faaliyetler 0x7f05003f
 int id facebook_logo 0x7f050042
 int id facebook_text 0x7f050048
 int id fotoalbum 0x7f050040
-int id help_title_gest 0x7f05003d
 int id home 0x7f050014
 int id homeAsUp 0x7f050005
 int id icon 0x7f05002a
@@ -287,6 +286,7 @@ int id never 0x7f050009
 int id none 0x7f050010
 int id normal 0x7f050000
 int id persembe_evsohbeti_content 0x7f05003e
+int id persembe_evsohbeti_titel 0x7f05003d
 int id progress_circular 0x7f050018
 int id progress_horizontal 0x7f050019
 int id radio 0x7f05002f
@@ -371,6 +371,7 @@ int string facebook_logo 0x7f0a0011
 int string facebook_text 0x7f0a0012
 int string fotoalbum 0x7f0a0016
 int string instellingen 0x7f0a0017
+int string service_name 0x7f0a001b
 int string youtube_logo 0x7f0a0014
 int string youtube_text 0x7f0a0013
 int style AppBaseTheme 0x7f0b008b

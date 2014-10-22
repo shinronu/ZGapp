@@ -20,21 +20,20 @@
     
 	<!-- Clickable title -->
 	<TextView   
-	    android:id="@+id/help_title_gest"
+	    android:id="@+id/persembe_evsohbeti_titel"
         android:text="@string/faaliyetpage_persembe_evsohbeti_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:clickable="true"
-        android:textSize="30sp"
-        android:onClick="toggle_contents"/>
+        android:textSize="30sp"/>
 
 	<!--content to hide/show -->
 	<TextView   
 	    android:id="@+id/persembe_evsohbeti_content"
         android:text="@string/faaliyetpage_persembe_evsohbeti_content"
         android:layout_width="wrap_content"
-        android:textSize="30sp"
+        android:textSize="15sp"
         android:layout_height="wrap_content"/>
 
 	

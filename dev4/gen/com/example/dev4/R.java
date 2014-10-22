@@ -1080,7 +1080,7 @@ containing a value of this type.
         public static final int abc_textfield_searchview_right_holo_dark=0x7f020055;
         public static final int abc_textfield_searchview_right_holo_light=0x7f020056;
         public static final int facebook_logo=0x7f020057;
-        public static final int ic_launcher=0x7f020058;
+        public static final int icon=0x7f020058;
         public static final int youtube_logo=0x7f020059;
         public static final int zgt_logo_groot=0x7f02005a;
         public static final int zgt_naam=0x7f02005b;
@@ -1119,7 +1119,6 @@ containing a value of this type.
         public static final int facebook_logo=0x7f050042;
         public static final int facebook_text=0x7f050048;
         public static final int fotoalbum=0x7f050040;
-        public static final int help_title_gest=0x7f05003d;
         public static final int home=0x7f050014;
         public static final int homeAsUp=0x7f050005;
         public static final int icon=0x7f05002a;
@@ -1132,6 +1131,7 @@ containing a value of this type.
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
         public static final int persembe_evsohbeti_content=0x7f05003e;
+        public static final int persembe_evsohbeti_titel=0x7f05003d;
         public static final int progress_circular=0x7f050018;
         public static final int progress_horizontal=0x7f050019;
         public static final int radio=0x7f05002f;
@@ -1273,6 +1273,7 @@ containing a value of this type.
         public static final int facebook_text=0x7f0a0012;
         public static final int fotoalbum=0x7f0a0016;
         public static final int instellingen=0x7f0a0017;
+        public static final int service_name=0x7f0a001b;
         public static final int youtube_logo=0x7f0a0014;
         public static final int youtube_text=0x7f0a0013;
     }
