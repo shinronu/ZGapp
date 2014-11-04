@@ -1,11 +1,12 @@
 package com.shinronu.ZaferGenclikApp;
 import com.example.dev4.R;
-
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -16,8 +17,8 @@ import android.view.View.OnClickListener;
 @SuppressWarnings("unused")
 public class _Menu extends Activity {
    	@Override
-    public void onCreate(Bundle icicle) {
-        super.onCreate(icicle);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.zgt_menu);   
         MaakImages();
         MaakTekst();
@@ -63,14 +64,13 @@ public class _Menu extends Activity {
 				_Menu.this.finish();
 			}});
     }
-  // deze moeten nog naar onclicklisteners verwerkt worden in d MaakKnoppen()
+  // deze moeten nog naar onclicklisteners verwerkt worden in de MaakKnoppen()
     public void OpenFotoalbum(View v){
     	setContentView(R.layout.zgt_splash);
 	}
     public void OpenAyarlar(View v){
     	Intent i = new Intent(this, ZaferGenclikService.class);
     	this.startService(i);
-    	
     	//startService(new Intent(_Menu.this, ZaferGenclikService.class));
 	}
 }

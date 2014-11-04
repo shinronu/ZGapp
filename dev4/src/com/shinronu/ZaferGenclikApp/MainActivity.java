@@ -1,10 +1,10 @@
 package com.shinronu.ZaferGenclikApp;
 import com.example.dev4.R;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.ActionBar;
 
 public class MainActivity extends Activity {
 	private final int SPLASH_DISPLAY_LENGHT = 1000;
@@ -13,6 +13,8 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.zgt_splash);
+		android.app.ActionBar actionbar = getActionBar();
+		actionbar.hide();
 	        new Handler().postDelayed(new Runnable(){
 	            @Override
 	            public void run() {

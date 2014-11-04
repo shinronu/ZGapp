@@ -1,6 +1,10 @@
 package com.shinronu.ZaferGenclikApp;
+import java.util.Calendar;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
 import android.os.IBinder;
 import android.util.Log;
@@ -17,6 +21,11 @@ public class ZaferGenclikService extends Service {
 	public void onStart(Intent intent, int startId){
 		Log.d(TAG, "onStart code reached");
 		Toast.makeText(this, "ZaferGenclikService has started", Timer).show();
+		Calendar calendar = Calendar.getInstance();
+		Intent i = new Intent();
+		PendingIntent pending = PendingIntent.getService(this, 0, intent, 0);
+		AlarmManager alarm = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
+		alarm.setRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), 30*1000, pending);
 		this.stopSelf();
 	}
 	public void onDestroy(){

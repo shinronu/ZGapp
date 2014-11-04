@@ -8,8 +8,10 @@ import org.jsoup.select.Elements;
 
 import com.example.dev4.R;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
@@ -91,7 +93,12 @@ public class Faaliyetler extends Activity{
 			animation_state = 0;
 		}
 	}
-
+	
+	@Override
+	public void onBackPressed(){
+		Intent i = new Intent(Faaliyetler.this, _Menu.class);
+		this.startActivity(i);
+	}
 	
 	private class Data_handler extends AsyncTask {		
 		@Override
