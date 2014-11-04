@@ -36,7 +36,18 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        
+        <activity android:name="com.shinronu.ZaferGenclikApp.LoginActivity"
+                  android:label="Login to your Account">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--  Entry for RegisterActivity.class -->
+        <activity android:name="com.shinronu.ZaferGenclikApp.RegisterActivity"
+                  android:label="Register New Account">
+        </activity>
+ 
         <service 
             android:name=".ZaferGenclikService"
             android:icon="@drawable/icon"

@@ -69,8 +69,8 @@ public class _Menu extends Activity {
     	setContentView(R.layout.zgt_splash);
 	}
     public void OpenAyarlar(View v){
-    	Intent i = new Intent(this, ZaferGenclikService.class);
-    	this.startService(i);
+    	Intent i = new Intent(this, LoginActivity.class);
+    	this.startActivity(i);
     	//startService(new Intent(_Menu.this, ZaferGenclikService.class));
 	}
 }
