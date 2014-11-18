@@ -36,7 +36,7 @@
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
-        <activity android:name="com.shinronu.ZaferGenclikApp.LoginActivity"
+        <activity android:name="com.shinronu.ZaferGenclikApp.Login_Register.LoginActivity"
                   android:label="Login to your Account">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -44,7 +44,7 @@
             </intent-filter>
         </activity>
         <!--  Entry for RegisterActivity.class -->
-        <activity android:name="com.shinronu.ZaferGenclikApp.RegisterActivity"
+        <activity android:name="com.shinronu.ZaferGenclikApp.Login_Register.RegisterActivity"
                   android:label="Register New Account">
         </activity>
  

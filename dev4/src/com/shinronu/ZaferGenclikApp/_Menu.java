@@ -1,5 +1,10 @@
 package com.shinronu.ZaferGenclikApp;
+import java.util.List;
+
 import com.example.dev4.R;
+import com.shinronu.ZaferGenclikApp.Database.*;
+import com.shinronu.ZaferGenclikApp.Login_Register.LoginActivity;
+
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
@@ -7,6 +12,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
@@ -23,6 +29,24 @@ public class _Menu extends Activity {
         MaakImages();
         MaakTekst();
         MaakKnoppen();
+        
+        DataBaseHandler db = new DataBaseHandler(this);
+        /**
+         * CRUD Operations
+         * */
+        // Inserting Contacts
+        Log.d("Insert: ", "Inserting .."); 
+        db.addContact(new Contact("Erdi Erdal", "1000"));        
+
+         
+        // Reading all contacts
+        Log.d("Reading: ", "Reading all contacts.."); 
+        List<Contact> contacts = db.getAllContacts();       
+         
+        for (Contact cn : contacts) {
+            String log = "Id: "+cn.get_id()+" ,Name: " + cn.get_name() + " ,Phone: " + cn.get_phone_number();
+                // Writing Contacts to log
+        Log.d("Name: ", log);}
         //startService(new Intent(_Menu.this, ZaferGenclikService.class));
     }   
     
