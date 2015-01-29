@@ -8,11 +8,11 @@
     <string name="facebook_text">Facebook.com/zafergenclik</string>
     <string name="youtube_text">Youtube.com/Zafergenclik</string>
     <string name="youtube_logo">Youtube logo</string>
-    <string name="faaliyetler">Faaliyetler</string>
+    <string name="faaliyetler">Activiteiten</string>
     <string name="fotoalbum">Foto album</string>
     <string name="instellingen">instellingen</string>
-    <string name="faaliyet_header">Faaliyetler</string>
-	<string name="faaliyetpage_persembe_evsohbeti_title">Persembe Ev Sohbeti</string>
+    <string name="faaliyet_header">Activiteiten</string>
+	<string name="faaliyetpage_persembe_evsohbeti_title">Donderdagse Lezing</string>
 	<string name="faaliyetpage_persembe_evsohbeti_content">Yer:x  Saat:y Konu:z</string>
 	<string name="service_name">Zafer Genclik Service</string>
 </resources>

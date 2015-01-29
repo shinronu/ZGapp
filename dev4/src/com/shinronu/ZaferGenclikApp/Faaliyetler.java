@@ -105,12 +105,12 @@ public class Faaliyetler extends Activity{
 		protected Object doInBackground(Object... params) {
 			try {
 				Document doc = Jsoup.connect(URL).get();
-				Elements Yer = doc.select("td#LC1");
-				Elements Saat = doc.select("td#LC2");
-				Elements Konu = doc.select("td#LC3");
-				SYer = Yer.text(); 
-				SSaat = Saat.text();
-				SKonu = Konu.text();
+				Elements Plaats = doc.select("td#LC1");
+				Elements Tijd = doc.select("td#LC2");
+				Elements Onderwerp = doc.select("td#LC3");
+				SYer = Plaats.text(); 
+				SSaat = Tijd.text();
+				SKonu = Onderwerp.text();
 			}	
 			catch(MalformedURLException e){ 
 			}	 

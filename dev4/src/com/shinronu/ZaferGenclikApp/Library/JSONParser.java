@@ -17,9 +17,10 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONException;
 import org.json.JSONObject;
  
+import android.os.AsyncTask;
 import android.util.Log;
  
-public class JSONParser {
+public class JSONParser extends AsyncTask{
  
     static InputStream is = null;
     static JSONObject jObj = null;
@@ -77,4 +78,10 @@ public class JSONParser {
         return jObj;
  
     }
+
+	@Override
+	protected Object doInBackground(Object... params) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

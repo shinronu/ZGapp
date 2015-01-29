@@ -10,16 +10,19 @@ import org.json.JSONObject;
 import com.shinronu.ZaferGenclikApp.Database.DatabaseHandler;
  
 import android.content.Context;
+import android.os.AsyncTask;
  
-public class UserFunctions {
+public class UserFunctions extends AsyncTask{
      
     private JSONParser jsonParser;
      
     // Testing in localhost using wamp or xampp 
     // use http://10.0.2.2/ to connect to your localhost ie http://localhost/
-    private static String loginURL = "http://10.0.2.2/ah_login_api/";
-    private static String registerURL = "http://10.0.2.2/ah_login_api/";
-     
+//    private static String loginURL = "http://10.0.2.2/ah_login_api/";
+//    private static String registerURL = "http://10.0.2.2/ah_login_api/";
+    private static String loginURL = "http://0867502.herobo.com/";
+    private static String registerURL = "http://0867502.herobo.com/";
+    
     private static String login_tag = "login";
     private static String register_tag = "register";
      
@@ -87,5 +90,12 @@ public class UserFunctions {
         db.resetTables();
         return true;
     }
+
+
+@Override
+protected Object doInBackground(Object... params) {
+	// TODO Auto-generated method stub
+	return null;
+}
      
 }
